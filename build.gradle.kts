@@ -1,5 +1,8 @@
+import com.codingfeline.buildkonfig.compiler.FieldSpec.Type.STRING
+
 plugins {
     kotlin("multiplatform") version "1.8.10"
+    id("com.codingfeline.buildkonfig") version "0.13.3"
 }
 
 group = "vet.inpulse"
@@ -28,4 +31,13 @@ kotlin {
         val jvmMain by getting
         val jvmTest by getting
     }
+}
+
+buildkonfig {
+    packageName = "$group.core"
+
+    defaultConfigs {
+        buildConfigField(STRING, "VERSION", "2")
+    }
+
 }
