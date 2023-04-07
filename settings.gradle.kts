@@ -1,3 +1,10 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
 
-rootProject.name = "BuildKonfig-Sample"
-
+include(":buildconfig")
+include(":app")
